@@ -128,9 +128,13 @@ Both endpoints require an API key passed via `X-Api-Key` header.
 
 ## 👤 Author
 
+## 👤 Author
+
 **Kateryna Gurina**
-- GitHub: [@KaterynaGurina](https://github.com/KaterynaGurina)
-- LinkedIn: [Your LinkedIn Profile]
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF00FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://katerynagurina.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-00FFFF?style=for-the-badge&logo=github&logoColor=black)](https://github.com/KaterynaGurina)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-FF00FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kateryna-gurina-156512160/)
 
 ## 📄 License
 
