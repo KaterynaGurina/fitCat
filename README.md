@@ -132,7 +132,7 @@ Both endpoints require an API key passed via `X-Api-Key` header.
 
 **Kateryna Gurina**
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF00FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://katerynagurina.github.io/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF00FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://katerynagurina.github.io/Project-Personal-Website/index.html)
 [![GitHub](https://img.shields.io/badge/GitHub-00FFFF?style=for-the-badge&logo=github&logoColor=black)](https://github.com/KaterynaGurina)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-FF00FF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kateryna-gurina-156512160/)
 
