@@ -1,4 +1,17 @@
-/* Reset and Base Styles */
+/* Cyberpunk Techno Theme */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech+Mono&display=swap');
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+h1, h2, h3 {
+    font-family: 'Audiowide', sans-serif;
+}
+
+button {
+    font-family: 'Audiowide', sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +19,13 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Share Tech Mono', monospace;
+    background: #0a0e27;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,0,255,0.03) 2px, rgba(255,0,255,0.03) 4px),
+        linear-gradient(180deg, #0a0e27 0%, #1a1f3a 100%);
     min-height: 100vh;
-    color: #333;
+    color: #00ffff;
     padding-bottom: 3rem;
 }
 
@@ -20,41 +36,49 @@ body {
 }
 
 h1 {
-    color: white;
+    color: #ff00ff;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
 }
 
 h2 {
-    color: #333;
+    color: #00ffff;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
+    text-transform: uppercase;
+    border-left: 4px solid #ff00ff;
+    padding-left: 1rem;
 }
 
 h3 {
-    color: #667eea;
+    color: #ff00ff;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
+    text-transform: uppercase;
 }
 
 p {
-    color: white;
+    color: #00ffff;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
 a {
-    color: white;
+    color: #ff00ff;
     text-decoration: none;
+    transition: all 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
 }
 
-/* Navigation Cards */
 .nav-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -63,126 +87,153 @@ a:hover {
 }
 
 .card {
-    background: white;
+    background: rgba(26, 31, 58, 0.8);
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.1);
     text-decoration: none;
-    color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #00ffff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.6), inset 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.card:hover::before {
+    opacity: 0.3;
 }
 
 .card h2 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    color: #667eea;
+    color: #ff00ff;
+    border: none;
+    padding: 0;
 }
 
 .card p {
-    color: #666;
-    font-size: 1rem;
+    color: #00ffff;
+    font-size: 0.9rem;
     text-align: left;
     margin-bottom: 0;
 }
 
-/* Form Styles */
 form {
-    background: white;
+    background: rgba(26, 31, 58, 0.9);
     padding: 2rem;
-    border-radius: 15px;
+    border: 2px solid #00ffff;
     margin: 2rem 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
 }
 
 label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #333;
+    color: #ff00ff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 input, select, textarea {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    border: 2px solid #00ffff;
+    background: rgba(10, 14, 39, 0.8);
+    color: #00ffff;
     font-size: 1rem;
-    font-family: inherit;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+    background: rgba(10, 14, 39, 1);
 }
 
 button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #ff00ff 0%, #00ffff 100%);
+    color: #0a0e27;
     padding: 1rem 2rem;
     border: none;
-    border-radius: 8px;
     font-size: 1.1rem;
     cursor: pointer;
     width: 100%;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
 }
 
 button:hover {
-    opacity: 0.9;
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.8);
+    transform: translateY(-2px);
 }
 
-/* Results Container */
 .results {
-    background: white;
+    background: rgba(26, 31, 58, 0.9);
     padding: 2rem;
-    border-radius: 15px;
+    border: 2px solid #ff00ff;
     margin: 2rem 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
 }
 
 .results h2 {
-    color: #667eea;
-    border-bottom: 3px solid #667eea;
+    color: #ff00ff;
+    border-left: 4px solid #00ffff;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
 }
 
-/* Individual Result Items - THIS IS THE KEY PART! */
 .result-item {
-    background: #f8f9fa;
+    background: rgba(10, 14, 39, 0.6);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid #667eea;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid #ff00ff;
+    border-right: 1px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: all 0.3s;
 }
 
 .result-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.result-item:last-child {
-    margin-bottom: 0;
+    transform: translateX(10px);
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+    border-left-width: 8px;
 }
 
 .result-item h3 {
-    color: #667eea;
+    color: #ff00ff;
     font-size: 1.4rem;
     margin-bottom: 1rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .result-item p {
-    color: #555;
+    color: #00ffff;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
@@ -190,48 +241,60 @@ button:hover {
 }
 
 .result-item p strong {
-    color: #333;
+    color: #ff00ff;
     font-weight: 600;
 }
 
-.result-item img {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Error Message */
 .error {
-    background: #fee;
-    color: #c00;
+    background: rgba(255, 0, 100, 0.2);
+    color: #ff0066;
     padding: 1rem;
-    border-radius: 8px;
+    border: 2px solid #ff0066;
     margin: 1rem 0;
     text-align: center;
-    border: 2px solid #fcc;
+    box-shadow: 0 0 20px rgba(255, 0, 100, 0.3);
 }
 
-/* Responsive Design */
+/* YOUR STATS SECTION - AGGRESSIVE FIX */
+.stats,
+.summary,
+.user-stats,
+.calculator-results,
+div[class*="stat"] {
+    background: rgba(26, 31, 58, 0.9) !important;
+    padding: 2rem !important;
+    border: 2px solid #ff00ff !important;
+    margin: 2rem 0 !important;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.3) !important;
+}
+
+.stats h3,
+.summary h3,
+.user-stats h3 {
+    color: #ff00ff !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.5rem !important;
+}
+
+.stats p,
+.summary p,
+.user-stats p {
+    color: #00ffff !important;
+    text-align: left !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1rem !important;
+}
+
+.stats p strong,
+.summary p strong,
+.user-stats p strong {
+    color: #ff00ff !important;
+}
+
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .nav-cards {
-        grid-template-columns: 1fr;
-    }
-    
-    .container {
-        padding: 1rem;
-    }
-    
-    form, .results {
-        padding: 1.5rem;
-    }
-    
-    .result-item {
-        padding: 1rem;
-    }
+    h1 { font-size: 2rem; }
+    .nav-cards { grid-template-columns: 1fr; }
+    .container { padding: 1rem; }
+    form, .results { padding: 1.5rem; }
+    .result-item { padding: 1rem; }
 }

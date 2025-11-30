@@ -37,10 +37,10 @@ A full-stack web application for tracking fitness and nutrition goals. Search ex
 ## 📦 Installation
 ```bash
 # Clone repository
-git clone https://github.com/YOUR-USERNAME/fitness-nutrition-tracker.git
+git clone https://github.com/KaterynaGurina/fitCat
 
 # Navigate to project
-cd fitness-nutrition-tracker
+cd firCat
 
 # Install dependencies
 npm install
@@ -118,20 +118,21 @@ fitness-nutrition-tracker/
 
 ## 📈 Future Improvements
 
+- [ ] Try another API with a more extended database
 - [ ] User authentication and profiles
 - [ ] Save workouts and meals
 - [ ] Progress tracking with charts
-- [ ] Database integration (MongoDB/PostgreSQL)
+- [ ] Self database integration (MongoDB/PostgreSQL)
 - [ ] Meal planning feature
 - [ ] Workout routine builder
 - [ ] Mobile app version
 
 ## 👨‍💻 Author
 
-Your Name
-- [LinkedIn](your-linkedin-url)
-- [Portfolio](your-portfolio-url)
-- [GitHub](https://github.com/YOUR-USERNAME)
+Kateryna Gurina
+- [LinkedIn](https://www.linkedin.com/in/kateryna-gurina-156512160/)
+- [Portfolio](https://katerynagurina.github.io/Project-Personal-Website/cv.html)
+- [GitHub](https://github.com/KaterynaGurina)
 
 ## 📄 License
 

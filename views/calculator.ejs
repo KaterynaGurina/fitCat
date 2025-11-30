@@ -74,7 +74,7 @@
                 
                 <div class="result-item">
                     <h3>Basal Metabolic Rate (BMR)</h3>
-                    <p style="font-size: 2rem; color: #667eea; font-weight: bold; margin: 1rem 0;">
+                    <p style="font-size: 2rem; color: #ff00ff; font-weight: bold; margin: 1rem 0; text-shadow: 0 0 10px #ff00ff;">
                         <%= results.bmr %> calories/day
                     </p>
                     <p style="text-align: left;">This is the number of calories your body burns at rest, just to maintain basic functions like breathing and circulation.</p>
@@ -82,7 +82,7 @@
                 
                 <div class="result-item">
                     <h3>Total Daily Energy Expenditure (TDEE)</h3>
-                    <p style="font-size: 2rem; color: #667eea; font-weight: bold; margin: 1rem 0;">
+                    <p style="font-size: 2rem; color: #ff00ff; font-weight: bold; margin: 1rem 0; text-shadow: 0 0 10px #ff00ff;">
                         <%= results.tdee %> calories/day
                     </p>
                     <p style="text-align: left;">This is your total calorie burn including daily activities and exercise. Eat this amount to maintain your current weight.</p>
@@ -101,13 +101,13 @@
                     <p><strong>Carbohydrates:</strong> <%= results.carbs %>g (40%)</p>
                     <p><strong>Fat:</strong> <%= results.fat %>g (30%)</p>
                     
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666; text-align: left;">
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #00ffff; opacity: 0.7; text-align: left;">
                         <em>These are general recommendations. Adjust based on your specific goals and preferences.</em>
                     </p>
                 </div>
                 
-                <div class="result-item" style="background: #e8f0fe;">
-                    <h3>Your Stats</h3>
+                    <div class="result-item">
+                        <h3>Your Stats</h3>
                     <p><strong>Age:</strong> <%= results.age %> years</p>
                     <p><strong>Gender:</strong> <%= results.gender.charAt(0).toUpperCase() + results.gender.slice(1) %></p>
                     <p><strong>Weight:</strong> <%= results.weight %> kg</p>
