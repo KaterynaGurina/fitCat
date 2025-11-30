@@ -1,144 +1,147 @@
-# Fitness & Nutrition Tracker
+# 🏋️ FitCat - Fitness & Nutrition Tracker
 
-A full-stack web application for tracking fitness and nutrition goals. Search exercises by muscle group, analyze food nutrition, and calculate daily calorie needs.
+A full-stack web application designed to help fitness enthusiasts track their workouts, analyze nutrition, and calculate personalized calorie needs. Built with Node.js, Express, and a cyberpunk-themed UI.
 
-![Fitness Tracker](https://img.shields.io/badge/Status-Active-success)
-![Node.js](https://img.shields.io/badge/Node.js-v18+-green)
-![Express](https://img.shields.io/badge/Express-v4.18-blue)
+## ✨ Features
 
-## 🚀 Features
+### 🔍 Exercise Search
+Search exercises by muscle group and get detailed instructions, equipment needed, and difficulty levels.
 
-### 🏋️ Exercise Search
-- Search exercises by muscle group
-- Get detailed instructions and equipment requirements
-- Filter by difficulty level
-- 16+ muscle groups available
+![Exercise Search](screenshots/exercise-search.png)
+![Exercise Results](screenshots/exercise-result.png)
 
-### 🥗 Nutrition Analysis
-- Analyze nutritional content of foods
-- Get detailed macronutrient breakdown
-- View calories, protein, carbs, fats, and micronutrients
-- Real-time API integration
+### 🍎 Nutrition Analysis
+Analyze any food item to get comprehensive nutritional information including calories, macros, and micronutrients.
+
+![Nutrition Analysis](screenshots/nutrition-analysis.png)
+![Nutrition Results](screenshots/nutrition-result.png)
 
 ### 🧮 Calorie Calculator
-- Calculate Basal Metabolic Rate (BMR)
-- Determine Total Daily Energy Expenditure (TDEE)
-- Get personalized calorie goals for weight loss/gain/maintenance
-- Recommended macro distribution (protein, carbs, fats)
-- Uses Mifflin-St Jeor equation for accuracy
+Calculate your BMR (Basal Metabolic Rate), TDEE (Total Daily Energy Expenditure), and get personalized macro recommendations based on your goals.
+
+![Calorie Calculator](screenshots/calorie-calculator.png)
+![Calculator Results](screenshots/calorie-result.png)
+
+## 🎨 UI Design
+
+Cyberpunk-themed interface with neon aesthetics and smooth animations.
+
+![Homepage](screenshots/homepage.png)
 
 ## 🛠️ Technologies Used
 
-- **Backend:** Node.js, Express.js
-- **Frontend:** EJS templating, CSS3
-- **APIs:** API Ninjas (Exercise & Nutrition)
-- **Environment:** dotenv for configuration
+- **Backend**: Node.js, Express.js
+- **Frontend**: EJS templating, CSS3 (custom cyberpunk theme)
+- **APIs**: [API Ninjas](https://api-ninjas.com/) (Exercise & Nutrition endpoints)
+- **HTTP Client**: Axios
+- **Environment Variables**: dotenv
 
-## 📦 Installation
+## 🚀 Installation & Setup
+
+1. **Clone the repository**
 ```bash
-# Clone repository
-git clone https://github.com/KaterynaGurina/fitCat
-
-# Navigate to project
-cd firCat
-
-# Install dependencies
-npm install
-
-# Create .env file
-echo "PORT=3000
-EXERCISE_API_KEY=your-api-key-here" > .env
-
-# Run application
-npm start
+   git clone https://github.com/KaterynaGurina/fitCat.git
+   cd fitCat
 ```
 
-## 🔑 Getting API Key
-
-1. Visit [API Ninjas](https://api-ninjas.com/)
-2. Sign up for free account
-3. Get your API key from dashboard
-4. Add to `.env` file
-
-## 📱 Usage
-
-1. **Exercise Search:**
-   - Select muscle group from dropdown
-   - View 10 relevant exercises with instructions
-
-2. **Nutrition Analysis:**
-   - Enter food item (e.g., "chicken breast", "apple")
-   - View complete nutritional breakdown
-
-3. **Calorie Calculator:**
-   - Enter age, gender, weight, height
-   - Select activity level
-   - Get personalized calorie and macro recommendations
-
-## 🌐 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/` | Homepage |
-| GET | `/exercises` | Exercise search page |
-| POST | `/exercises` | Search exercises |
-| GET | `/nutrition` | Nutrition analysis page |
-| POST | `/nutrition` | Analyze food |
-| GET | `/calculator` | Calculator page |
-| POST | `/calculator` | Calculate calories |
-| GET | `/health` | Health check |
-
-## 📊 Project Structure
+2. **Install dependencies**
+```bash
+   npm install
 ```
-fitness-nutrition-tracker/
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root directory:
+```env
+   PORT=3000
+   EXERCISE_API_KEY=your_api_ninjas_key_here
+```
+   
+   Get your free API key from [API Ninjas](https://api-ninjas.com/)
+
+4. **Run the application**
+```bash
+   node index.js
+```
+
+5. **Open in browser**
+   
+   Navigate to `http://localhost:3000`
+
+## 📁 Project Structure
+```
+fitCat/
+├── index.js              # Main server file
+├── package.json          # Dependencies and scripts
+├── .env                  # Environment variables (not tracked)
+├── .gitignore           # Git ignore rules
+├── README.md            # Project documentation
+├── screenshots/         # UI screenshots
 ├── public/
 │   └── styles/
-│       └── main.css
-├── views/
-│   ├── index.ejs
-│   ├── exercises.ejs
-│   ├── nutrition.ejs
-│   └── calculator.ejs
-├── .env
-├── .gitignore
-├── index.js
-├── package.json
-└── README.md
+│       └── main.css     # Cyberpunk theme styles
+└── views/
+    ├── index.ejs        # Homepage
+    ├── exercises.ejs    # Exercise search page
+    ├── nutrition.ejs    # Nutrition analysis page
+    └── calculator.ejs   # Calorie calculator page
 ```
 
-## 🎯 What I Learned
+## 🔑 Features Breakdown
 
-- RESTful API integration with third-party services
-- Server-side rendering with EJS
-- Form handling and data validation
-- Responsive web design
-- Environment variable management
-- Error handling and user feedback
-- Implementing scientific formulas (BMR/TDEE calculations)
+### Exercise Search
+- Search by 16+ muscle groups (biceps, chest, abs, glutes, etc.)
+- Returns up to 10 exercises per search
+- Displays: exercise name, type, muscle, equipment, difficulty, instructions
 
-## 📈 Future Improvements
+### Nutrition Analysis
+- Analyze any food item or meal
+- Returns: calories, protein, carbs, fat, fiber, sugar
+- Shows serving size and detailed micronutrients
 
-- [ ] Try another API with a more extended database
-- [ ] User authentication and profiles
-- [ ] Save workouts and meals
-- [ ] Progress tracking with charts
-- [ ] Self database integration (MongoDB/PostgreSQL)
-- [ ] Meal planning feature
-- [ ] Workout routine builder
-- [ ] Mobile app version
+### Calorie Calculator
+- Calculates BMR using Mifflin-St Jeor equation
+- Factors in activity level (sedentary to extra active)
+- Provides:
+  - Maintenance calories (TDEE)
+  - Weight loss target (-500 cal)
+  - Weight gain target (+300 cal)
+  - Personalized macro split (30% protein, 40% carbs, 30% fat)
 
-## 👨‍💻 Author
+## 📊 API Reference
 
-Kateryna Gurina
-- [LinkedIn](https://www.linkedin.com/in/kateryna-gurina-156512160/)
-- [Portfolio](https://katerynagurina.github.io/Project-Personal-Website/cv.html)
-- [GitHub](https://github.com/KaterynaGurina)
+This project integrates with **API Ninjas**:
+
+- **Exercise API**: `GET https://api.api-ninjas.com/v1/exercises`
+- **Nutrition API**: `GET https://api.api-ninjas.com/v1/nutrition`
+
+Both endpoints require an API key passed via `X-Api-Key` header.
+
+## 🎯 Future Enhancements
+
+- [ ] User authentication and profile storage
+- [ ] Save favorite exercises and meals
+- [ ] Weekly workout planner
+- [ ] Progress tracking charts
+- [ ] Mobile responsive improvements
+- [ ] Dark/light theme toggle
+
+## 👤 Author
+
+**Kateryna Gurina**
+- GitHub: [@KaterynaGurina](https://github.com/KaterynaGurina)
+- LinkedIn: [Your LinkedIn Profile]
 
 ## 📄 License
 
-MIT License - feel free to use this project for learning!
+This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- API Ninjas for exercise and nutrition data
-- Mifflin-St Jeor equation for BMR calculations
+- [API Ninjas](https://api-ninjas.com/) for providing free fitness and nutrition APIs
+- Cyberpunk aesthetic inspiration from sci-fi and techno culture
+- Built as a learning project for full-stack web development
+
+---
+
+⭐ If you found this project helpful, please consider giving it a star!
