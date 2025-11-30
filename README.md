@@ -128,8 +128,6 @@ Both endpoints require an API key passed via `X-Api-Key` header.
 
 ## 👤 Author
 
-## 👤 Author
-
 **Kateryna Gurina**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF00FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://katerynagurina.github.io/Project-Personal-Website/index.html)
