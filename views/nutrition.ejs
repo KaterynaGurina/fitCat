@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🥗 Nutrition Analysis</h1>
+        <p><a href="/">← Back to Home</a></p>
+        
+        <!-- Search Form -->
+        <form method="POST" action="/nutrition">
+            <label for="food">Enter a food item:</label>
+            <input 
+                type="text" 
+                name="food" 
+                id="food" 
+                placeholder="e.g., apple, chicken breast, banana"
+                required
+            >
+            <small style="display: block; color: white; margin-bottom: 1rem;">
+                Tip: Use simple food names like "apple", "chicken breast", "brown rice"
+            </small>
+            <button type="submit">Analyze Nutrition</button>
+        </form>
+        
+        <!-- Error Message -->
+        <% if (error) { %>
+            <div class="error">
+                <%= error %>
+            </div>
+        <% } %>
+        
+        <!-- Results -->
+        <% if (nutrition && nutrition.length > 0) { %>
+            <div class="results">
+                <h2>Nutrition Facts</h2>
+                
+                <% nutrition.forEach(item => { %>
+                <div class="result-item">
+                    <h3><%= item.name %></h3>
+                    <p><strong>Serving Size:</strong> <%= item.serving_size_g %>g</p>
+                    <p><strong>Calories:</strong> <%= item.calories %> kcal</p>
+                    
+                    <h4 style="margin-top: 1rem; color: #667eea;">Macronutrients</h4>
+                    <p><strong>Protein:</strong> <%= item.protein_g %>g</p>
+                    <p><strong>Carbohydrates:</strong> <%= item.carbohydrates_total_g %>g</p>
+                    <p><strong>Fat:</strong> <%= item.fat_total_g %>g</p>
+                    <p><strong>Fiber:</strong> <%= item.fiber_g %>g</p>
+                    <p><strong>Sugar:</strong> <%= item.sugar_g %>g</p>
+                    
+                    <h4 style="margin-top: 1rem; color: #667eea;">Other Nutrients</h4>
+                    <p><strong>Sodium:</strong> <%= item.sodium_mg %>mg</p>
+                    <p><strong>Potassium:</strong> <%= item.potassium_mg %>mg</p>
+                    <p><strong>Cholesterol:</strong> <%= item.cholesterol_mg %>mg</p>
+                    <p><strong>Saturated Fat:</strong> <%= item.fat_saturated_g %>g</p>
+                </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
